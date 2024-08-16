@@ -1,0 +1,57 @@
+.responseContainer {
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--section-background);
+    overflow: hidden; /* Hide scrollbars */
+    margin: 1rem 0;
+    max-width: 100%; /* Ensure it doesn't overflow the container */
+}
+
+.codeBlock {
+    padding: 1rem;
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+}
+
+.responseCode {
+    margin: 0;
+    padding: 0.5rem;
+    font-family: 'Noto Sans Mono', monospace;
+    color: var(--text-color);
+    line-height: 1.5;
+    border-bottom: 1px solid var(--border-color); /* Border below the code block */
+    word-break: break-word; /* Break long words to prevent overflow */
+    white-space: pre-wrap; /* Wraps text to fit within the container */
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.responseCode::before {
+    content: '{\A';
+    white-space: pre;
+}
+
+.responseCode::after {
+    content: '\A}';
+    white-space: pre;
+}
+
+.copySection {
+    padding: 1rem;
+    text-align: center;
+}
+
+.copyButton {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.copyButton:hover {
+    background-color: #4a3b7d; /* Darker shade for hover effect */
+    transform: translateY(-2px); /* Lift the button on hover */
+}

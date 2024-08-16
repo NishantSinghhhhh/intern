@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Mono:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #a5b4fc;
+  --background-color: #0f172a;
+  --text-color: #e2e8f0;
+  --accent-color: #22d3ee;
+  --code-background: #1e293b;
+  --section-background: #1e293b;
+  --border-color: #334155;
+}
+
+.tableContainer {
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden; /* Ensure no scrollbars */
+  margin: 1rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.table {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Prevent table from expanding beyond its container */
+}
+
+.tableHeader {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem; /* Increased padding */
+  text-align: left;
+  font-size: 1.1rem; /* Increased font size */
+}
+
+.table th, .table td {
+  border: 1px solid var(--border-color);
+  padding: 1rem; /* Increased padding */
+  font-size: 1rem; /* Increased font size */
+  word-wrap: break-word; /* Ensure long words break properly */
+}
+
+.table td {
+  background-color: var(--section-background);
+  color: var(--text-color);
+}
+
+/* Specific styling for the "Parameter" column */
+.table td.parameter {
+  color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .table th, .table td {
+    /* display: block; */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .table th::before, .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    text-align: left;
+  }
+
+  .table th {
+    /* display: none; Hide table headers for small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .table {
+    font-size: 0.9rem; /* Slightly smaller font size on very small screens */
+  }
+}

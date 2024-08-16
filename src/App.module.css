@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+Mono:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #a5b4fc;
+    --background-color: #0f172a;
+    --text-color: #e2e8f0;
+    --accent-color: #22d3ee;
+    --code-background: #1e293b;
+    --section-background: #1e293b;
+    --border-color: #334155;
+}
+
+.h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.h3{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.p {
+    font-size: 1.1rem;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.button2{
+    color: white;
+    background-color: var(--primary-color);
+    font-family: "Inter", sans-serif;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    
+}
+
+.button {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: #45adbd; /* Change background color on hover */
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow effect */
+}
+
+.box {
+    font-family: "Inter", sans-serif;
+    background-color: var(--section-background); /* Updated background color */
+    border-radius: 8px; /* Unified border radius */
+    padding: 2rem; /* Unified padding */
+    overflow-x: hidden;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    width: 58%;
+    margin: auto;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles for .box */
+@media (max-width: 768px) {
+    .box {
+        width: 80%; /* Adjust width for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 90%; /* Further adjust width for very small screens */
+        padding: 0.75rem; /* Further adjust padding */
+    }
+
+    .h2 {
+        font-size: 1.2em; /* Smaller font size for headings on very small screens */
+    }
+
+    .p {
+        font-size: 1rem; /* Smaller font size for paragraphs */
+    }
+
+    .button {
+        font-size: 0.9rem; /* Smaller font size for buttons */
+        padding: 0.5rem 1rem; /* Adjust padding for buttons */
+    }
+}
+
+.box3 {
+    font-family: "Inter", sans-serif;
+    background-color: var(--section-background);
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    text-align: center; /* Centers text content inside */
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+/* Responsive styles for .box3 */
+@media (max-width: 768px) {
+    .box3 {
+        width: 80%; /* Adjust width for smaller screens */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .box3 {
+        width: 90%; /* Further adjust width for very small screens */
+        padding: 0.75rem; /* Further adjust padding */
+    }
+}
